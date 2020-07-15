@@ -1,0 +1,75 @@
+body {
+  font-family: 'Arya', sans-serif;
+  font-size: 16px;
+  background-image: linear-gradient(122deg, #00c800 -3%, #3eb6fd 49%);
+  background: #FFFFFF;
+}
+
+header {
+  background: #000000;
+}
+
+footer {
+  background: #000000;
+}
+
+#app {
+  height: 100%;  
+}
+
+h1 {
+  color: black;
+  font-size: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  color: black;
+  font-size: 30px; 
+  margin: 0;
+  padding: 0;
+}
+
+.logo
+{
+  padding: 10px;
+}
+
+.led
+{
+	width: 30px;
+	height: 30px;
+	padding: 0;
+	margin: 3px;
+}
+
+.stateOn
+{
+  background: green;
+}
+
+.stateOff
+{
+  background: #AAAAAA;
+}
+
+.stateHigh
+{
+  background: green;
+}
+
+.stateLow
+{
+  background: #AAAAAA;
+}
+
+.pin
+{
+	width: 30px;
+	height: 30px;
+	padding: 0;
+	margin: 3px;
+  line-height: 18px;
+  text-align: center;;
+}
