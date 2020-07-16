@@ -435,7 +435,7 @@ async function doLedStuff(ledCharacteristic, device)
         // console.log("Writing", i);
         leds[0] = i;
         leds[1] = -i + 31;
-        leds[2] = -i + 31;
+        leds[3] = -i + 31;
         leds[4] = i;
         activeReadWrites++;
         const bufLed = Buffer.from(leds);

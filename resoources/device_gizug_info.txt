@@ -1,0 +1,1055 @@
+DD:82:10:FF:52:5E
+BBC micro:bit [gizug]
+
+
+[NEW] Primary Service (Handle 0x002a)
+        /org/bluez/hci0/dev_DD_82_10_FF_52_5E/service003d
+        e95d6100-251d-470a-a062-fa1922dfa9a8
+        MicroBit Temperature Service
+
+[NEW] Characteristic (Handle 0x22d0)
+        /org/bluez/hci0/dev_DD_82_10_FF_52_5E/service003d/char0041
+        e95d1b25-251d-470a-a062-fa1922dfa9a8
+        MicroBit Temperature Period
+
+e95d6100-251d-470a-a062-fa1922dfa9a8
+
+
+
+
+[NEW] Primary Service (Handle 0x002a)
+        /org/bluez/hci0/dev_DD_82_10_FF_52_5E/service0008
+        00001801-0000-1000-8000-00805f9b34fb
+        Generic Attribute Profile
+[NEW] Characteristic (Handle 0x22d0)
+        /org/bluez/hci0/dev_DD_82_10_FF_52_5E/service0008/char0009
+        00002a05-0000-1000-8000-00805f9b34fb
+        Service Changed
+[NEW] Descriptor (Handle 0xdf04)
+        /org/bluez/hci0/dev_DD_82_10_FF_52_5E/service0008/char0009/desc000b
+        00002902-0000-1000-8000-00805f9b34fb
+        Client Characteristic Configuration
+[NEW] Primary Service (Handle 0x002a)
+        /org/bluez/hci0/dev_DD_82_10_FF_52_5E/service000c
+        e95d93b0-251d-470a-a062-fa1922dfa9a8
+        MicroBit DFU Control Service
+[NEW] Characteristic (Handle 0x22d0)
+        /org/bluez/hci0/dev_DD_82_10_FF_52_5E/service000c/char000d
+        e95d93b1-251d-470a-a062-fa1922dfa9a8
+        MicroBit DFU Control
+[NEW] Primary Service (Handle 0x002a)
+        /org/bluez/hci0/dev_DD_82_10_FF_52_5E/service000f
+        e97dd91d-251d-470a-a062-fa1922dfa9a8
+        Vendor specific
+[NEW] Characteristic (Handle 0x22d0)
+        /org/bluez/hci0/dev_DD_82_10_FF_52_5E/service000f/char0010
+        e97d3b10-251d-470a-a062-fa1922dfa9a8
+        Vendor specific
+[NEW] Descriptor (Handle 0xf42c)
+        /org/bluez/hci0/dev_DD_82_10_FF_52_5E/service000f/char0010/desc0012
+        00002902-0000-1000-8000-00805f9b34fb
+        Client Characteristic Configuration
+[NEW] Primary Service (Handle 0x002a)
+        /org/bluez/hci0/dev_DD_82_10_FF_52_5E/service0013
+        0000180a-0000-1000-8000-00805f9b34fb
+        Device Information
+[NEW] Characteristic (Handle 0x22d0)
+        /org/bluez/hci0/dev_DD_82_10_FF_52_5E/service0013/char0014
+        00002a24-0000-1000-8000-00805f9b34fb
+        Model Number String
+[NEW] Characteristic (Handle 0x22d0)
+        /org/bluez/hci0/dev_DD_82_10_FF_52_5E/service0013/char0016
+        00002a25-0000-1000-8000-00805f9b34fb
+        Serial Number String
+[NEW] Characteristic (Handle 0x22d0)
+        /org/bluez/hci0/dev_DD_82_10_FF_52_5E/service0013/char0018
+        00002a26-0000-1000-8000-00805f9b34fb
+        Firmware Revision String
+[NEW] Primary Service (Handle 0x002a)
+        /org/bluez/hci0/dev_DD_82_10_FF_52_5E/service001a
+        e95d93af-251d-470a-a062-fa1922dfa9a8
+        MicroBit Event Service
+[NEW] Characteristic (Handle 0x22d0)
+        /org/bluez/hci0/dev_DD_82_10_FF_52_5E/service001a/char001b
+        e95d9775-251d-470a-a062-fa1922dfa9a8
+        MicroBit Event Data
+[NEW] Descriptor (Handle 0x0b6c)
+        /org/bluez/hci0/dev_DD_82_10_FF_52_5E/service001a/char001b/desc001d
+        00002902-0000-1000-8000-00805f9b34fb
+        Client Characteristic Configuration
+[NEW] Characteristic (Handle 0x0001)
+        /org/bluez/hci0/dev_DD_82_10_FF_52_5E/service001a/char001e
+        e95d5404-251d-470a-a062-fa1922dfa9a8
+        MicroBit Client Events
+[NEW] Characteristic (Handle 0x22d0)
+        /org/bluez/hci0/dev_DD_82_10_FF_52_5E/service001a/char0020
+        e95d23c4-251d-470a-a062-fa1922dfa9a8
+        MicroBit Client Requirements
+[NEW] Characteristic (Handle 0x22d0)
+        /org/bluez/hci0/dev_DD_82_10_FF_52_5E/service001a/char0022
+        e95db84c-251d-470a-a062-fa1922dfa9a8
+        MicroBit Requirements
+[NEW] Descriptor (Handle 0x2004)
+        /org/bluez/hci0/dev_DD_82_10_FF_52_5E/service001a/char0022/desc0024
+        00002902-0000-1000-8000-00805f9b34fb
+        Client Characteristic Configuration
+[NEW] Primary Service (Handle 0x002a)
+        /org/bluez/hci0/dev_DD_82_10_FF_52_5E/service0025
+        e95d9882-251d-470a-a062-fa1922dfa9a8
+        MicroBit Button Service
+[NEW] Characteristic (Handle 0x22d0)
+        /org/bluez/hci0/dev_DD_82_10_FF_52_5E/service0025/char0026
+        e95dda90-251d-470a-a062-fa1922dfa9a8
+        MicroBit Button A State
+[NEW] Descriptor (Handle 0x3454)
+        /org/bluez/hci0/dev_DD_82_10_FF_52_5E/service0025/char0026/desc0028
+        00002902-0000-1000-8000-00805f9b34fb
+        Client Characteristic Configuration
+[NEW] Characteristic (Handle 0x22d0)
+        /org/bluez/hci0/dev_DD_82_10_FF_52_5E/service0025/char0029
+        e95dda91-251d-470a-a062-fa1922dfa9a8
+        MicroBit Button B State
+[NEW] Descriptor (Handle 0x3bdc)
+        /org/bluez/hci0/dev_DD_82_10_FF_52_5E/service0025/char0029/desc002b
+        00002902-0000-1000-8000-00805f9b34fb
+        Client Characteristic Configuration
+[NEW] Primary Service (Handle 0x002a)
+        /org/bluez/hci0/dev_DD_82_10_FF_52_5E/service002c
+        e95d127b-251d-470a-a062-fa1922dfa9a8
+        MicroBit IO PIN Service
+[NEW] Characteristic (Handle 0x22d0)
+        /org/bluez/hci0/dev_DD_82_10_FF_52_5E/service002c/char002d
+        e95d5899-251d-470a-a062-fa1922dfa9a8
+        MicroBit PIN AD Configuration
+[NEW] Characteristic (Handle 0x22d0)
+        /org/bluez/hci0/dev_DD_82_10_FF_52_5E/service002c/char002f
+        e95db9fe-251d-470a-a062-fa1922dfa9a8
+        Vendor specific
+[NEW] Characteristic (Handle 0x22d0)
+        /org/bluez/hci0/dev_DD_82_10_FF_52_5E/service002c/char0031
+        e95dd822-251d-470a-a062-fa1922dfa9a8
+        MicroBit PWM Control
+[NEW] Characteristic (Handle 0x22d0)
+        /org/bluez/hci0/dev_DD_82_10_FF_52_5E/service002c/char0033
+        e95d8d00-251d-470a-a062-fa1922dfa9a8
+        MicroBit PIN Data
+[NEW] Descriptor (Handle 0x5134)
+        /org/bluez/hci0/dev_DD_82_10_FF_52_5E/service002c/char0033/desc0035
+        00002902-0000-1000-8000-00805f9b34fb
+        Client Characteristic Configuration
+[NEW] Primary Service (Handle 0x002a)
+        /org/bluez/hci0/dev_DD_82_10_FF_52_5E/service0036
+        e95dd91d-251d-470a-a062-fa1922dfa9a8
+        MicroBit LED Service
+[NEW] Characteristic (Handle 0x22d0)
+        /org/bluez/hci0/dev_DD_82_10_FF_52_5E/service0036/char0037
+        e95d7b77-251d-470a-a062-fa1922dfa9a8
+        MicroBit LED Matrix state
+[NEW] Characteristic (Handle 0x22d0)
+        /org/bluez/hci0/dev_DD_82_10_FF_52_5E/service0036/char0039
+        e95d93ee-251d-470a-a062-fa1922dfa9a8
+        MicroBit LED Text
+[NEW] Characteristic (Handle 0x22d0)
+        /org/bluez/hci0/dev_DD_82_10_FF_52_5E/service0036/char003b
+        e95d0d2d-251d-470a-a062-fa1922dfa9a8
+        MicroBit Scrolling Delay
+[NEW] Primary Service (Handle 0x002a)
+        /org/bluez/hci0/dev_DD_82_10_FF_52_5E/service003d
+        e95d6100-251d-470a-a062-fa1922dfa9a8
+        MicroBit Temperature Service
+[NEW] Characteristic (Handle 0x22d0)
+        /org/bluez/hci0/dev_DD_82_10_FF_52_5E/service003d/char003e
+        e95d9250-251d-470a-a062-fa1922dfa9a8
+        Vendor specific
+[NEW] Descriptor (Handle 0xc6c4)
+        /org/bluez/hci0/dev_DD_82_10_FF_52_5E/service003d/char003e/desc0040
+        00002902-0000-1000-8000-00805f9b34fb
+        Client Characteristic Configuration
+[NEW] Characteristic (Handle 0x22d0)
+        /org/bluez/hci0/dev_DD_82_10_FF_52_5E/service003d/char0041
+        e95d1b25-251d-470a-a062-fa1922dfa9a8
+        MicroBit Temperature Period
+[CHG] Device DD:82:10:FF:52:5E UUIDs: 00001800-0000-1000-8000-00805f9b34fb
+[CHG] Device DD:82:10:FF:52:5E UUIDs: 00001801-0000-1000-8000-00805f9b34fb
+[CHG] Device DD:82:10:FF:52:5E UUIDs: 0000180a-0000-1000-8000-00805f9b34fb
+[CHG] Device DD:82:10:FF:52:5E UUIDs: e95d127b-251d-470a-a062-fa1922dfa9a8
+[CHG] Device DD:82:10:FF:52:5E UUIDs: e95d6100-251d-470a-a062-fa1922dfa9a8
+[CHG] Device DD:82:10:FF:52:5E UUIDs: e95d93af-251d-470a-a062-fa1922dfa9a8
+[CHG] Device DD:82:10:FF:52:5E UUIDs: e95d93b0-251d-470a-a062-fa1922dfa9a8
+[CHG] Device DD:82:10:FF:52:5E UUIDs: e95d9882-251d-470a-a062-fa1922dfa9a8
+[CHG] Device DD:82:10:FF:52:5E UUIDs: e95dd91d-251d-470a-a062-fa1922dfa9a8
+[CHG] Device DD:82:10:FF:52:5E UUIDs: e97dd91d-251d-470a-a062-fa1922dfa9a8
+[CHG] Device DD:82:10:FF:52:5E ServicesResolved: yes
+[CHG] Device DD:82:10:FF:52:5E Appearance: 0x0200
+
+
+
+
+poweredOn
+Scanning
+Discovered Device:  dd:82:10:ff:52:5e
+Found ours !
+DEVICE
+<ref *1> Peripheral {
+  _noble: Noble {
+    initialized: true,
+    address: 'b8:27:eb:d3:b6:b8',
+    _state: 'poweredOn',
+    _bindings: NobleBindings {
+      _state: 'poweredOn',
+      _addresses: [Object],
+      _addresseTypes: [Object],
+      _connectable: [Object],
+      _pendingConnectionUuid: null,
+      _connectionQueue: [],
+      _handles: {},
+      _gatts: {},
+      _aclStreams: {},
+      _signalings: {},
+      _hci: [Hci],
+      _gap: [Gap],
+      _events: [Object: null prototype],
+      _eventsCount: 21,
+      onSigIntBinded: [Function: bound ],
+      _scanServiceUuids: []
+    },
+    _peripherals: { dd8210ff525e: [Circular *1] },
+    _services: { dd8210ff525e: {} },
+    _characteristics: { dd8210ff525e: {} },
+    _descriptors: { dd8210ff525e: {} },
+    _discoveredPeripheralUUids: [ 'dd8210ff525e' ],
+    _events: [Object: null prototype] {
+      warning: [Function: bound ],
+      newListener: [Function: bound ],
+      stateChange: [Function (anonymous)],
+      discover: [Function: discovered]
+    },
+    _eventsCount: 4,
+    _allowDuplicates: undefined
+  },
+  id: 'dd8210ff525e',
+  uuid: 'dd8210ff525e',
+  address: 'dd:82:10:ff:52:5e',
+  addressType: 'random',
+  connectable: true,
+  advertisement: {
+    localName: 'BBC micro:bit [gizug]',
+    txPowerLevel: undefined,
+    manufacturerData: undefined,
+    serviceData: [],
+    serviceUuids: [],
+    solicitationServiceUuids: [],
+    serviceSolicitationUuids: []
+  },
+  rssi: -40,
+  services: null,
+  state: 'disconnected'
+}
+SERVICES
+[
+  Service {
+    _noble: Noble {
+      initialized: true,
+      address: 'b8:27:eb:d3:b6:b8',
+      _state: 'poweredOn',
+      _bindings: [NobleBindings],
+      _peripherals: [Object],
+      _services: [Object],
+      _characteristics: [Object],
+      _descriptors: [Object],
+      _discoveredPeripheralUUids: [Array],
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _allowDuplicates: undefined
+    },
+    _peripheralId: 'dd8210ff525e',
+    uuid: '1800',
+    name: 'Generic Access',
+    type: 'org.bluetooth.service.generic_access',
+    includedServiceUuids: null,
+    characteristics: [ [Characteristic], [Characteristic], [Characteristic] ],
+    _events: [Object: null prototype] {},
+    _eventsCount: 0
+  },
+  Service {
+    _noble: Noble {
+      initialized: true,
+      address: 'b8:27:eb:d3:b6:b8',
+      _state: 'poweredOn',
+      _bindings: [NobleBindings],
+      _peripherals: [Object],
+      _services: [Object],
+      _characteristics: [Object],
+      _descriptors: [Object],
+      _discoveredPeripheralUUids: [Array],
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _allowDuplicates: undefined
+    },
+    _peripheralId: 'dd8210ff525e',
+    uuid: '1801',
+    name: 'Generic Attribute',
+    type: 'org.bluetooth.service.generic_attribute',
+    includedServiceUuids: null,
+    characteristics: [ [Characteristic] ],
+    _events: [Object: null prototype] {},
+    _eventsCount: 0
+  },
+  Service {
+    _noble: Noble {
+      initialized: true,
+      address: 'b8:27:eb:d3:b6:b8',
+      _state: 'poweredOn',
+      _bindings: [NobleBindings],
+      _peripherals: [Object],
+      _services: [Object],
+      _characteristics: [Object],
+      _descriptors: [Object],
+      _discoveredPeripheralUUids: [Array],
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _allowDuplicates: undefined
+    },
+    _peripheralId: 'dd8210ff525e',
+    uuid: 'e95d93b0251d470aa062fa1922dfa9a8',
+    name: null,
+    type: null,
+    includedServiceUuids: null,
+    characteristics: [ [Characteristic] ],
+    _events: [Object: null prototype] {},
+    _eventsCount: 0
+  },
+  Service {
+    _noble: Noble {
+      initialized: true,
+      address: 'b8:27:eb:d3:b6:b8',
+      _state: 'poweredOn',
+      _bindings: [NobleBindings],
+      _peripherals: [Object],
+      _services: [Object],
+      _characteristics: [Object],
+      _descriptors: [Object],
+      _discoveredPeripheralUUids: [Array],
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _allowDuplicates: undefined
+    },
+    _peripheralId: 'dd8210ff525e',
+    uuid: 'e97dd91d251d470aa062fa1922dfa9a8',
+    name: null,
+    type: null,
+    includedServiceUuids: null,
+    characteristics: [ [Characteristic] ],
+    _events: [Object: null prototype] {},
+    _eventsCount: 0
+  },
+  Service {
+    _noble: Noble {
+      initialized: true,
+      address: 'b8:27:eb:d3:b6:b8',
+      _state: 'poweredOn',
+      _bindings: [NobleBindings],
+      _peripherals: [Object],
+      _services: [Object],
+      _characteristics: [Object],
+      _descriptors: [Object],
+      _discoveredPeripheralUUids: [Array],
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _allowDuplicates: undefined
+    },
+    _peripheralId: 'dd8210ff525e',
+    uuid: '180a',
+    name: 'Device Information',
+    type: 'org.bluetooth.service.device_information',
+    includedServiceUuids: null,
+    characteristics: [ [Characteristic], [Characteristic], [Characteristic] ],
+    _events: [Object: null prototype] {},
+    _eventsCount: 0
+  },
+  Service {
+    _noble: Noble {
+      initialized: true,
+      address: 'b8:27:eb:d3:b6:b8',
+      _state: 'poweredOn',
+      _bindings: [NobleBindings],
+      _peripherals: [Object],
+      _services: [Object],
+      _characteristics: [Object],
+      _descriptors: [Object],
+      _discoveredPeripheralUUids: [Array],
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _allowDuplicates: undefined
+    },
+    _peripheralId: 'dd8210ff525e',
+    uuid: 'e95d93af251d470aa062fa1922dfa9a8',
+    name: null,
+    type: null,
+    includedServiceUuids: null,
+    characteristics: [
+      [Characteristic],
+      [Characteristic],
+      [Characteristic],
+      [Characteristic]
+    ],
+    _events: [Object: null prototype] {},
+    _eventsCount: 0
+  },
+  Service {
+    _noble: Noble {
+      initialized: true,
+      address: 'b8:27:eb:d3:b6:b8',
+      _state: 'poweredOn',
+      _bindings: [NobleBindings],
+      _peripherals: [Object],
+      _services: [Object],
+      _characteristics: [Object],
+      _descriptors: [Object],
+      _discoveredPeripheralUUids: [Array],
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _allowDuplicates: undefined
+    },
+    _peripheralId: 'dd8210ff525e',
+    uuid: 'e95d9882251d470aa062fa1922dfa9a8',
+    name: null,
+    type: null,
+    includedServiceUuids: null,
+    characteristics: [ [Characteristic], [Characteristic] ],
+    _events: [Object: null prototype] {},
+    _eventsCount: 0
+  },
+  Service {
+    _noble: Noble {
+      initialized: true,
+      address: 'b8:27:eb:d3:b6:b8',
+      _state: 'poweredOn',
+      _bindings: [NobleBindings],
+      _peripherals: [Object],
+      _services: [Object],
+      _characteristics: [Object],
+      _descriptors: [Object],
+      _discoveredPeripheralUUids: [Array],
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _allowDuplicates: undefined
+    },
+    _peripheralId: 'dd8210ff525e',
+    uuid: 'e95d127b251d470aa062fa1922dfa9a8',
+    name: null,
+    type: null,
+    includedServiceUuids: null,
+    characteristics: [
+      [Characteristic],
+      [Characteristic],
+      [Characteristic],
+      [Characteristic]
+    ],
+    _events: [Object: null prototype] {},
+    _eventsCount: 0
+  },
+  Service {
+    _noble: Noble {
+      initialized: true,
+      address: 'b8:27:eb:d3:b6:b8',
+      _state: 'poweredOn',
+      _bindings: [NobleBindings],
+      _peripherals: [Object],
+      _services: [Object],
+      _characteristics: [Object],
+      _descriptors: [Object],
+      _discoveredPeripheralUUids: [Array],
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _allowDuplicates: undefined
+    },
+    _peripheralId: 'dd8210ff525e',
+    uuid: 'e95dd91d251d470aa062fa1922dfa9a8',
+    name: null,
+    type: null,
+    includedServiceUuids: null,
+    characteristics: [ [Characteristic], [Characteristic], [Characteristic] ],
+    _events: [Object: null prototype] {},
+    _eventsCount: 0
+  },
+  Service {
+    _noble: Noble {
+      initialized: true,
+      address: 'b8:27:eb:d3:b6:b8',
+      _state: 'poweredOn',
+      _bindings: [NobleBindings],
+      _peripherals: [Object],
+      _services: [Object],
+      _characteristics: [Object],
+      _descriptors: [Object],
+      _discoveredPeripheralUUids: [Array],
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _allowDuplicates: undefined
+    },
+    _peripheralId: 'dd8210ff525e',
+    uuid: 'e95d6100251d470aa062fa1922dfa9a8',
+    name: null,
+    type: null,
+    includedServiceUuids: null,
+    characteristics: [ [Characteristic], [Characteristic] ],
+    _events: [Object: null prototype] {},
+    _eventsCount: 0
+  }
+]
+CHARACTERISTICS
+[
+  Characteristic {
+    _noble: Noble {
+      initialized: true,
+      address: 'b8:27:eb:d3:b6:b8',
+      _state: 'poweredOn',
+      _bindings: [NobleBindings],
+      _peripherals: [Object],
+      _services: [Object],
+      _characteristics: [Object],
+      _descriptors: [Object],
+      _discoveredPeripheralUUids: [Array],
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _allowDuplicates: undefined
+    },
+    _peripheralId: 'dd8210ff525e',
+    _serviceUuid: '1800',
+    uuid: '2a00',
+    name: 'Device Name',
+    type: 'org.bluetooth.characteristic.gap.device_name',
+    properties: [ 'read', 'write' ],
+    descriptors: null
+  },
+  Characteristic {
+    _noble: Noble {
+      initialized: true,
+      address: 'b8:27:eb:d3:b6:b8',
+      _state: 'poweredOn',
+      _bindings: [NobleBindings],
+      _peripherals: [Object],
+      _services: [Object],
+      _characteristics: [Object],
+      _descriptors: [Object],
+      _discoveredPeripheralUUids: [Array],
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _allowDuplicates: undefined
+    },
+    _peripheralId: 'dd8210ff525e',
+    _serviceUuid: '1800',
+    uuid: '2a01',
+    name: 'Appearance',
+    type: 'org.bluetooth.characteristic.gap.appearance',
+    properties: [ 'read' ],
+    descriptors: null
+  },
+  Characteristic {
+    _noble: Noble {
+      initialized: true,
+      address: 'b8:27:eb:d3:b6:b8',
+      _state: 'poweredOn',
+      _bindings: [NobleBindings],
+      _peripherals: [Object],
+      _services: [Object],
+      _characteristics: [Object],
+      _descriptors: [Object],
+      _discoveredPeripheralUUids: [Array],
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _allowDuplicates: undefined
+    },
+    _peripheralId: 'dd8210ff525e',
+    _serviceUuid: '1800',
+    uuid: '2a04',
+    name: 'Peripheral Preferred Connection Parameters',
+    type: 'org.bluetooth.characteristic.gap.peripheral_preferred_connection_parameters',
+    properties: [ 'read' ],
+    descriptors: null
+  },
+  Characteristic {
+    _noble: Noble {
+      initialized: true,
+      address: 'b8:27:eb:d3:b6:b8',
+      _state: 'poweredOn',
+      _bindings: [NobleBindings],
+      _peripherals: [Object],
+      _services: [Object],
+      _characteristics: [Object],
+      _descriptors: [Object],
+      _discoveredPeripheralUUids: [Array],
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _allowDuplicates: undefined
+    },
+    _peripheralId: 'dd8210ff525e',
+    _serviceUuid: 'e95d93b0251d470aa062fa1922dfa9a8',
+    uuid: 'e95d93b1251d470aa062fa1922dfa9a8',
+    name: null,
+    type: null,
+    properties: [ 'read', 'write' ],
+    descriptors: null
+  },
+  Characteristic {
+    _noble: Noble {
+      initialized: true,
+      address: 'b8:27:eb:d3:b6:b8',
+      _state: 'poweredOn',
+      _bindings: [NobleBindings],
+      _peripherals: [Object],
+      _services: [Object],
+      _characteristics: [Object],
+      _descriptors: [Object],
+      _discoveredPeripheralUUids: [Array],
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _allowDuplicates: undefined
+    },
+    _peripheralId: 'dd8210ff525e',
+    _serviceUuid: '180a',
+    uuid: '2a24',
+    name: 'Model Number String',
+    type: 'org.bluetooth.characteristic.model_number_string',
+    properties: [ 'read' ],
+    descriptors: null
+  },
+  Characteristic {
+    _noble: Noble {
+      initialized: true,
+      address: 'b8:27:eb:d3:b6:b8',
+      _state: 'poweredOn',
+      _bindings: [NobleBindings],
+      _peripherals: [Object],
+      _services: [Object],
+      _characteristics: [Object],
+      _descriptors: [Object],
+      _discoveredPeripheralUUids: [Array],
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _allowDuplicates: undefined
+    },
+    _peripheralId: 'dd8210ff525e',
+    _serviceUuid: '180a',
+    uuid: '2a25',
+    name: 'Serial Number String',
+    type: 'org.bluetooth.characteristic.serial_number_string',
+    properties: [ 'read' ],
+    descriptors: null
+  },
+  Characteristic {
+    _noble: Noble {
+      initialized: true,
+      address: 'b8:27:eb:d3:b6:b8',
+      _state: 'poweredOn',
+      _bindings: [NobleBindings],
+      _peripherals: [Object],
+      _services: [Object],
+      _characteristics: [Object],
+      _descriptors: [Object],
+      _discoveredPeripheralUUids: [Array],
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _allowDuplicates: undefined
+    },
+    _peripheralId: 'dd8210ff525e',
+    _serviceUuid: '180a',
+    uuid: '2a26',
+    name: 'Firmware Revision String',
+    type: 'org.bluetooth.characteristic.firmware_revision_string',
+    properties: [ 'read' ],
+    descriptors: null
+  },
+  Characteristic {
+    _noble: Noble {
+      initialized: true,
+      address: 'b8:27:eb:d3:b6:b8',
+      _state: 'poweredOn',
+      _bindings: [NobleBindings],
+      _peripherals: [Object],
+      _services: [Object],
+      _characteristics: [Object],
+      _descriptors: [Object],
+      _discoveredPeripheralUUids: [Array],
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _allowDuplicates: undefined
+    },
+    _peripheralId: 'dd8210ff525e',
+    _serviceUuid: '1801',
+    uuid: '2a05',
+    name: 'Service Changed',
+    type: 'org.bluetooth.characteristic.gatt.service_changed',
+    properties: [ 'indicate' ],
+    descriptors: null
+  },
+  Characteristic {
+    _noble: Noble {
+      initialized: true,
+      address: 'b8:27:eb:d3:b6:b8',
+      _state: 'poweredOn',
+      _bindings: [NobleBindings],
+      _peripherals: [Object],
+      _services: [Object],
+      _characteristics: [Object],
+      _descriptors: [Object],
+      _discoveredPeripheralUUids: [Array],
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _allowDuplicates: undefined
+    },
+    _peripheralId: 'dd8210ff525e',
+    _serviceUuid: 'e97dd91d251d470aa062fa1922dfa9a8',
+    uuid: 'e97d3b10251d470aa062fa1922dfa9a8',
+    name: null,
+    type: null,
+    properties: [ 'writeWithoutResponse', 'notify' ],
+    descriptors: null
+  },
+  Characteristic {
+    _noble: Noble {
+      initialized: true,
+      address: 'b8:27:eb:d3:b6:b8',
+      _state: 'poweredOn',
+      _bindings: [NobleBindings],
+      _peripherals: [Object],
+      _services: [Object],
+      _characteristics: [Object],
+      _descriptors: [Object],
+      _discoveredPeripheralUUids: [Array],
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _allowDuplicates: undefined
+    },
+    _peripheralId: 'dd8210ff525e',
+    _serviceUuid: 'e95d9882251d470aa062fa1922dfa9a8',
+    uuid: 'e95dda90251d470aa062fa1922dfa9a8',
+    name: null,
+    type: null,
+    properties: [ 'read', 'notify' ],
+    descriptors: null
+  },
+  Characteristic {
+    _noble: Noble {
+      initialized: true,
+      address: 'b8:27:eb:d3:b6:b8',
+      _state: 'poweredOn',
+      _bindings: [NobleBindings],
+      _peripherals: [Object],
+      _services: [Object],
+      _characteristics: [Object],
+      _descriptors: [Object],
+      _discoveredPeripheralUUids: [Array],
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _allowDuplicates: undefined
+    },
+    _peripheralId: 'dd8210ff525e',
+    _serviceUuid: 'e95d9882251d470aa062fa1922dfa9a8',
+    uuid: 'e95dda91251d470aa062fa1922dfa9a8',
+    name: null,
+    type: null,
+    properties: [ 'read', 'notify' ],
+    descriptors: null
+  },
+  Characteristic {
+    _noble: Noble {
+      initialized: true,
+      address: 'b8:27:eb:d3:b6:b8',
+      _state: 'poweredOn',
+      _bindings: [NobleBindings],
+      _peripherals: [Object],
+      _services: [Object],
+      _characteristics: [Object],
+      _descriptors: [Object],
+      _discoveredPeripheralUUids: [Array],
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _allowDuplicates: undefined
+    },
+    _peripheralId: 'dd8210ff525e',
+    _serviceUuid: 'e95dd91d251d470aa062fa1922dfa9a8',
+    uuid: 'e95d7b77251d470aa062fa1922dfa9a8',
+    name: null,
+    type: null,
+    properties: [ 'read', 'write' ],
+    descriptors: null
+  },
+  Characteristic {
+    _noble: Noble {
+      initialized: true,
+      address: 'b8:27:eb:d3:b6:b8',
+      _state: 'poweredOn',
+      _bindings: [NobleBindings],
+      _peripherals: [Object],
+      _services: [Object],
+      _characteristics: [Object],
+      _descriptors: [Object],
+      _discoveredPeripheralUUids: [Array],
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _allowDuplicates: undefined
+    },
+    _peripheralId: 'dd8210ff525e',
+    _serviceUuid: 'e95dd91d251d470aa062fa1922dfa9a8',
+    uuid: 'e95d93ee251d470aa062fa1922dfa9a8',
+    name: null,
+    type: null,
+    properties: [ 'write' ],
+    descriptors: null
+  },
+  Characteristic {
+    _noble: Noble {
+      initialized: true,
+      address: 'b8:27:eb:d3:b6:b8',
+      _state: 'poweredOn',
+      _bindings: [NobleBindings],
+      _peripherals: [Object],
+      _services: [Object],
+      _characteristics: [Object],
+      _descriptors: [Object],
+      _discoveredPeripheralUUids: [Array],
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _allowDuplicates: undefined
+    },
+    _peripheralId: 'dd8210ff525e',
+    _serviceUuid: 'e95dd91d251d470aa062fa1922dfa9a8',
+    uuid: 'e95d0d2d251d470aa062fa1922dfa9a8',
+    name: null,
+    type: null,
+    properties: [ 'read', 'write' ],
+    descriptors: null
+  },
+  Characteristic {
+    _noble: Noble {
+      initialized: true,
+      address: 'b8:27:eb:d3:b6:b8',
+      _state: 'poweredOn',
+      _bindings: [NobleBindings],
+      _peripherals: [Object],
+      _services: [Object],
+      _characteristics: [Object],
+      _descriptors: [Object],
+      _discoveredPeripheralUUids: [Array],
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _allowDuplicates: undefined
+    },
+    _peripheralId: 'dd8210ff525e',
+    _serviceUuid: 'e95d6100251d470aa062fa1922dfa9a8',
+    uuid: 'e95d9250251d470aa062fa1922dfa9a8',
+    name: null,
+    type: null,
+    properties: [ 'read', 'notify' ],
+    descriptors: null
+  },
+  Characteristic {
+    _noble: Noble {
+      initialized: true,
+      address: 'b8:27:eb:d3:b6:b8',
+      _state: 'poweredOn',
+      _bindings: [NobleBindings],
+      _peripherals: [Object],
+      _services: [Object],
+      _characteristics: [Object],
+      _descriptors: [Object],
+      _discoveredPeripheralUUids: [Array],
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _allowDuplicates: undefined
+    },
+    _peripheralId: 'dd8210ff525e',
+    _serviceUuid: 'e95d6100251d470aa062fa1922dfa9a8',
+    uuid: 'e95d1b25251d470aa062fa1922dfa9a8',
+    name: null,
+    type: null,
+    properties: [ 'read', 'write' ],
+    descriptors: null
+  },
+  Characteristic {
+    _noble: Noble {
+      initialized: true,
+      address: 'b8:27:eb:d3:b6:b8',
+      _state: 'poweredOn',
+      _bindings: [NobleBindings],
+      _peripherals: [Object],
+      _services: [Object],
+      _characteristics: [Object],
+      _descriptors: [Object],
+      _discoveredPeripheralUUids: [Array],
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _allowDuplicates: undefined
+    },
+    _peripheralId: 'dd8210ff525e',
+    _serviceUuid: 'e95d93af251d470aa062fa1922dfa9a8',
+    uuid: 'e95d9775251d470aa062fa1922dfa9a8',
+    name: null,
+    type: null,
+    properties: [ 'read', 'notify' ],
+    descriptors: null
+  },
+  Characteristic {
+    _noble: Noble {
+      initialized: true,
+      address: 'b8:27:eb:d3:b6:b8',
+      _state: 'poweredOn',
+      _bindings: [NobleBindings],
+      _peripherals: [Object],
+      _services: [Object],
+      _characteristics: [Object],
+      _descriptors: [Object],
+      _discoveredPeripheralUUids: [Array],
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _allowDuplicates: undefined
+    },
+    _peripheralId: 'dd8210ff525e',
+    _serviceUuid: 'e95d93af251d470aa062fa1922dfa9a8',
+    uuid: 'e95d5404251d470aa062fa1922dfa9a8',
+    name: null,
+    type: null,
+    properties: [ 'writeWithoutResponse', 'write' ],
+    descriptors: null
+  },
+  Characteristic {
+    _noble: Noble {
+      initialized: true,
+      address: 'b8:27:eb:d3:b6:b8',
+      _state: 'poweredOn',
+      _bindings: [NobleBindings],
+      _peripherals: [Object],
+      _services: [Object],
+      _characteristics: [Object],
+      _descriptors: [Object],
+      _discoveredPeripheralUUids: [Array],
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _allowDuplicates: undefined
+    },
+    _peripheralId: 'dd8210ff525e',
+    _serviceUuid: 'e95d93af251d470aa062fa1922dfa9a8',
+    uuid: 'e95d23c4251d470aa062fa1922dfa9a8',
+    name: null,
+    type: null,
+    properties: [ 'write' ],
+    descriptors: null
+  },
+  Characteristic {
+    _noble: Noble {
+      initialized: true,
+      address: 'b8:27:eb:d3:b6:b8',
+      _state: 'poweredOn',
+      _bindings: [NobleBindings],
+      _peripherals: [Object],
+      _services: [Object],
+      _characteristics: [Object],
+      _descriptors: [Object],
+      _discoveredPeripheralUUids: [Array],
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _allowDuplicates: undefined
+    },
+    _peripheralId: 'dd8210ff525e',
+    _serviceUuid: 'e95d93af251d470aa062fa1922dfa9a8',
+    uuid: 'e95db84c251d470aa062fa1922dfa9a8',
+    name: null,
+    type: null,
+    properties: [ 'read', 'notify' ],
+    descriptors: null
+  },
+  Characteristic {
+    _noble: Noble {
+      initialized: true,
+      address: 'b8:27:eb:d3:b6:b8',
+      _state: 'poweredOn',
+      _bindings: [NobleBindings],
+      _peripherals: [Object],
+      _services: [Object],
+      _characteristics: [Object],
+      _descriptors: [Object],
+      _discoveredPeripheralUUids: [Array],
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _allowDuplicates: undefined
+    },
+    _peripheralId: 'dd8210ff525e',
+    _serviceUuid: 'e95d127b251d470aa062fa1922dfa9a8',
+    uuid: 'e95d5899251d470aa062fa1922dfa9a8',
+    name: null,
+    type: null,
+    properties: [ 'read', 'write' ],
+    descriptors: null
+  },
+  Characteristic {
+    _noble: Noble {
+      initialized: true,
+      address: 'b8:27:eb:d3:b6:b8',
+      _state: 'poweredOn',
+      _bindings: [NobleBindings],
+      _peripherals: [Object],
+      _services: [Object],
+      _characteristics: [Object],
+      _descriptors: [Object],
+      _discoveredPeripheralUUids: [Array],
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _allowDuplicates: undefined
+    },
+    _peripheralId: 'dd8210ff525e',
+    _serviceUuid: 'e95d127b251d470aa062fa1922dfa9a8',
+    uuid: 'e95db9fe251d470aa062fa1922dfa9a8',
+    name: null,
+    type: null,
+    properties: [ 'read', 'write' ],
+    descriptors: null
+  },
+  Characteristic {
+    _noble: Noble {
+      initialized: true,
+      address: 'b8:27:eb:d3:b6:b8',
+      _state: 'poweredOn',
+      _bindings: [NobleBindings],
+      _peripherals: [Object],
+      _services: [Object],
+      _characteristics: [Object],
+      _descriptors: [Object],
+      _discoveredPeripheralUUids: [Array],
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _allowDuplicates: undefined
+    },
+    _peripheralId: 'dd8210ff525e',
+    _serviceUuid: 'e95d127b251d470aa062fa1922dfa9a8',
+    uuid: 'e95dd822251d470aa062fa1922dfa9a8',
+    name: null,
+    type: null,
+    properties: [ 'write' ],
+    descriptors: null
+  },
+  Characteristic {
+    _noble: Noble {
+      initialized: true,
+      address: 'b8:27:eb:d3:b6:b8',
+      _state: 'poweredOn',
+      _bindings: [NobleBindings],
+      _peripherals: [Object],
+      _services: [Object],
+      _characteristics: [Object],
+      _descriptors: [Object],
+      _discoveredPeripheralUUids: [Array],
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _allowDuplicates: undefined
+    },
+    _peripheralId: 'dd8210ff525e',
+    _serviceUuid: 'e95d127b251d470aa062fa1922dfa9a8',
+    uuid: 'e95d8d00251d470aa062fa1922dfa9a8',
+    name: null,
+    type: null,
+    properties: [ 'read', 'write', 'notify' ],
+    descriptors: null
+  }
+]
