@@ -5,6 +5,7 @@ const noble = require("noble")
 // https://lancaster-university.github.io/microbit-docs/ble/profile/
 
 let activeReadWrites = 0;
+let mustQuit = 0;
 
 const timeout = ms => new Promise(res => setTimeout(res, ms))
 
@@ -99,13 +100,22 @@ function discovered(device)
 {
     console.log("Discovered Device: ", device.address);
     // if (device.address === "dd:82:10:ff:52:5e")
+    if (typeof device.advertisement.localName === "undefined")
+    {
+        return;
+    }
+
+    if (device.advertisement.localName.indexOf("micro:bit") < 0)
+    {
+        console.log(device.advertisement.localName);
+        return;
+    }
+
     if (device.advertisement.localName.indexOf("micro:bit") >= 0)
     {
         console.log(device.advertisement.localName);
         console.log("RSSI: ", device.rssi);
         noble.stopScanning();
-        // console.log("DEVICE");
-        // console.log(device);
         device.connect(function(error) { connected(error, device); });
     }
 }
@@ -181,35 +191,55 @@ async function deviceready(error, services, characteristics, device)
     }
 
 
-    if (temperatureCharacteristic !== null)
-    {
-        await doTemperatureStuff(temperatureCharacteristic, device);
-    }
-    /*
-    if (ledCharacteristic !== null)
-    {
-        await doLedStuff(ledCharacteristic, device);
-    }
-    */
-    if (pinDataCharacteristic !== null && pinIOConfigCharacteristic != null && 
-        pinPWMControlCharacteristic != null && pinADConfigCharacteristic != null)
-    {
-        await doPinStuff(pinIOConfigCharacteristic, pinADConfigCharacteristic, pinPWMControlCharacteristic, pinDataCharacteristic, device);
-    }
-
     if (button1Characteristic !== null)
     {
+    	button1Characteristic.on("data", onButton1Pressed);
+        button1Characteristic.subscribe(onButtonSubscribed);
         await doButtonStuff(button1Characteristic, device);
     }
 
     if (button2Characteristic !== null)
     {
+    	button2Characteristic.on("data", onButton2Pressed);
+        button2Characteristic.subscribe(onButtonSubscribed);
         await doButtonStuff(button2Characteristic, device);
     }
 
     if (temperatureCharacteristic !== null)
     {
         await doTemperatureStuff(temperatureCharacteristic, device);
+    }
+
+    if (ledCharacteristic !== null)
+    {
+        await doLedStuff(ledCharacteristic, device);
+    }
+
+    if (pinDataCharacteristic !== null && pinIOConfigCharacteristic != null && 
+        pinPWMControlCharacteristic != null && pinADConfigCharacteristic != null)
+    {
+        await doPinStuff(pinIOConfigCharacteristic, pinADConfigCharacteristic, pinPWMControlCharacteristic, pinDataCharacteristic, device);
+    }
+
+    if (temperatureCharacteristic !== null)
+    {
+        await doTemperatureStuff(temperatureCharacteristic, device);
+    }
+
+    mustQuit = 0;
+    while (mustQuit < 10)
+    {
+        await delay();
+    }
+
+    if (button1Characteristic !== null)
+    {
+        button1Characteristic.unsubscribe(onButtonUnsubscribed);
+    }
+
+    if (button2Characteristic !== null)
+    {
+        button2Characteristic.unsubscribe(onButtonUnsubscribed);
     }
 
     console.log("");
@@ -260,6 +290,34 @@ function toLedLine(value)
     result += (value & 2) === 2 ? "O" : ".";
     result += (value & 1) === 1 ? "O" : ".";
     return result;
+}
+
+function onButton1Pressed(data, isNotification)
+{
+	mustQuit++;
+	console.log("Button A Event", mustQuit);
+}
+
+function onButton2Pressed(data, isNotification)
+{
+	mustQuit++;
+	console.log("Button B Event", mustQuit);
+}
+
+function onButtonUnsubscribed(error)
+{
+    if (error)
+    {
+        console.log("onButtonUnsubscribed: ", error);
+    }
+}
+
+function onButtonSubscribed(error)
+{
+    if (error)
+    {
+        console.log("onButtonSubscribed: ", error);
+    }
 }
 
 function readPinData(error, data, device)
