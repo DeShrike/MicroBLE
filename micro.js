@@ -13,6 +13,11 @@ async function delay()
     await timeout(100);
 }
 
+async function halfDelay()
+{
+    await timeout(50);
+}
+
 async function waitForEvents()
 {
     while (activeReadWrites > 0)
@@ -180,12 +185,12 @@ async function deviceready(error, services, characteristics, device)
     {
         await doTemperatureStuff(temperatureCharacteristic, device);
     }
-
+    /*
     if (ledCharacteristic !== null)
     {
         await doLedStuff(ledCharacteristic, device);
     }
-
+    */
     if (pinDataCharacteristic !== null && pinIOConfigCharacteristic != null && 
         pinPWMControlCharacteristic != null && pinADConfigCharacteristic != null)
     {
@@ -365,17 +370,37 @@ async function doPinStuff(pinIOConfigCharacteristic, pinADConfigCharacteristic,
     console.log("");
     console.log("Writing PIN Data");
 
-    for (let i = 0; i < 50; i++)
-    {
-        pins = [0, i % 2];
-        activeReadWrites++;
-        const bufLed = Buffer.from(pins);
-        pinDataCharacteristic.write(bufLed, true, writePinData);
+    const buffers = []
+    let bufIndex = 0;
+    let bufPin;
+    bufPin = Buffer.from([2, 0, 1, 0, 0, 0]);
+    buffers.push(bufPin);
+    bufPin = Buffer.from([2, 0, 1, 0, 0, 1]);
+    buffers.push(bufPin);
+    bufPin = Buffer.from([2, 0, 1, 1, 0, 0]);
+    buffers.push(bufPin);
+    bufPin = Buffer.from([2, 1, 1, 0, 0, 0]);
+    buffers.push(bufPin);
+    bufPin = Buffer.from([2, 0, 1, 1, 0, 0]);
+    buffers.push(bufPin);
 
+    for (let i = 0; i < 102; i++)
+    {
+        activeReadWrites++;
+        pinDataCharacteristic.write(buffers[bufIndex], true, writePinData);
+        bufIndex = (bufIndex +1 ) % buffers.length;
         await waitForEvents();
 
         await delay();
     }
+
+    /*
+    pins = [0, 0];
+    const bufLed = Buffer.from(pins);
+    activeReadWrites++;
+    pinDataCharacteristic.write(bufLed, true, writePinData);
+    await waitForEvents();
+    */
 }
 
 async function doButtonStuff(buttonCharacteristic, device)
