@@ -122,6 +122,14 @@ sudo node scan.js
 This will scan for Bluetooth LE devices and exit if it finds a micro:bit.
 
 ```
+sudo node scan.js
+```
+
+This will scan for Bluetooth LE devices and connect to the first micro:bit it finds and read the temperature.
+
+![micro:bit](resources/MicroBLE_temperature.png)
+
+```
 sudo node micro.js
 ```
 

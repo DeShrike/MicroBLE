@@ -4,8 +4,9 @@
   "description": "micro:bit BLE tool",
   "main": "micro.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "sudo node micro.js"
+    "scan": "sudo node scan.js",
+    "temperature": "sudo node temperature.js",
+    "full": "sudo node fulltest.js"
   },
   "keywords": [],
   "author": "PH",
