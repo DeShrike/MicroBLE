@@ -16,6 +16,7 @@ sudo apt-get install libreadline-dev
 Download Bluez: http://www.bluez.org/download/
 
 ```
+wget http://www.kernel.org/pub/linux/bluetooth/bluez-5.54.tar.xz
 extract: tar -xvf bluez-5.54.tar.xz
 cd bluez-5.54
 ```
@@ -26,13 +27,16 @@ sudo make
 sudo make install
 ```
 
-reboot the Pi
+You may now remove the folder bluez-5.54 and the .xz file
+
+Reboot the Pi
 
 ```
 systemctl status bluetooth
 ```
 
 edit: /lib/systemd/system/bluetooth.service
+
 add "--experimental" to executing line
 
 ```
@@ -61,10 +65,10 @@ systemctl start bluetooth
 
 - Edit node_modules/noble/lib/hci-socket/hci.js
 
-	line 6:
-	```
-	var BluetoothHciSocket = require('@abandonware/bluetooth-hci-socket');
-	```
+Line 6:
+```
+var BluetoothHciSocket = require('@abandonware/bluetooth-hci-socket');
+```
 
 
 To make your own app:
@@ -75,21 +79,47 @@ To make your own app:
 	npm install @abandonware/bluetooth-hci-socket --save
 	```
 
-	And then edit node_modules/noble/lib/hci-socket/hci.js
+And then edit node_modules/noble/lib/hci-socket/hci.js
 
 
-### Step 5
+### Step 5 - Preparing your Micro:bit
 
-- Install one of the .hex files on your micro:bit
+#### Option 1
 
-	More Info:
+Install MicroBLE.hex on your micro:bit
 
-	- https://www.bluetooth.com/blog/bluetooth-bbc-microbit/
-	- https://github.com/lancaster-university/microbit-samples/tree/master/source/examples/bluetooth-services
-	- https://lancaster-university.github.io/microbit-docs/ble/profile/
+You can also try the other .hex file. More info about those here:
+
+- https://www.bluetooth.com/blog/bluetooth-bbc-microbit/
+- https://github.com/lancaster-university/microbit-samples/tree/master/source/examples/bluetooth-services
+- https://lancaster-university.github.io/microbit-docs/ble/profile/
+
+After the micro:bit reboots, you should see this pattern:
+
+![micro:bit](resources/MicroBLE1.png)
+
+#### Option 2 - Create your own .hex file
+
+Go to https://makecode.microbit.org
+
+Install the bluetooth services
+
+![micro:bit](resources/MicroBLE0.png)
+
+Create the app. Mine looks like this:
+
+![micro:bit](resources/MicroBLE2.png)
+
+Upload it to the micro:bit
 
 
 ### Step 6
+
+```
+sudo node scan.js
+```
+
+This will scan for Bluetooth LE devices and exit if it finds a micro:bit.
 
 ```
 sudo node micro.js
@@ -102,6 +132,7 @@ This script will connect to the first micro:bit it finds and send some commands 
 - toggle PIN 0 low/high a few times
 - Wait for a few button presses
 
+![micro:bit](resources/MicroBLE_photo.jpg)
 
 ## References
 
