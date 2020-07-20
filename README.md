@@ -1,5 +1,7 @@
 # Bluetooth LE with nodejs on Raspberry PI - Talking to a BBC micro:bit
 
+Tested on a Raspberry PI 3B with Rasbian Stretch Lite and RaspiOS Lite
+
 ## Installing BLUEZ
 
 Install Prerequisites:
@@ -39,33 +41,40 @@ systemctl start bluetooth
 
 ## Nodejs app with NOBLE
 
-```
-mkdir ble
-cd ble
+Step 1
+- First Install BLUEZ (see above)
 
+Step 2
+- Clone this repo - git clone <url>
+
+Step 3
+- Run: npm init
+
+This will install noble and @abandonware/bluetooth-hci-socket
+Ignore the errors during the building of bluetooth-hci-socket
+
+Step 4
+- Edit node_modules/noble/lib/hci-socket/hci.js
+
+  line 6:
+  ```
+	var BluetoothHciSocket = require('@abandonware/bluetooth-hci-socket');
+  ```
+
+
+To make your own app:
+
+```
 npm init -y
 npm install noble --save
 npm install @abandonware/bluetooth-hci-socket --save
 ```
 
-edit node_modules/noble/lib/hci-socket/hci.js
+And the edit node_modules/noble/lib/hci-socket/hci.js
 
-line 6:
-```
-	var BluetoothHciSocket = require('@abandonware/bluetooth-hci-socket');
-```
 
-## Using
-
-- Install BLUEZ (see above)
-- Install Noble (see above)
-- Clone this repo and run:
-
-```
-npm install
-```
-
-Install one of the .hex files on your micro:bit
+Step 5
+- Install one of the .hex files on your micro:bit
 
 More Info:
 
@@ -73,6 +82,8 @@ More Info:
 - https://github.com/lancaster-university/microbit-samples/tree/master/source/examples/bluetooth-services
 - https://lancaster-university.github.io/microbit-docs/ble/profile/
 
+
+Step 6
 ```
 sudo node micro.js
 ```
@@ -82,6 +93,7 @@ This script will connect to the first micro:bit it finds and send some commands 
 - reading the state of the 2 buttons
 - show a few patterns on the LED matrix
 - toggle PIN 0 low/high a few times
+- Wait for a few button presses
 
 
 ## References

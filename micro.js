@@ -226,6 +226,8 @@ async function deviceready(error, services, characteristics, device)
         await doTemperatureStuff(temperatureCharacteristic, device);
     }
 
+    console.log("Now press the micro;bit buttons a few times.");
+
     mustQuit = 0;
     while (mustQuit < 10)
     {
