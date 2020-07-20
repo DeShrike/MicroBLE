@@ -2,6 +2,8 @@
 
 Tested on a Raspberry PI 3B with Rasbian Stretch Lite and RaspiOS Lite
 
+This is just an experiment, not a full fledged library.
+
 
 ## Installing BLUEZ
 
@@ -31,9 +33,6 @@ You may now remove the folder bluez-5.54 and the .xz file
 
 Reboot the Pi
 
-```
-systemctl status bluetooth
-```
 
 edit: /lib/systemd/system/bluetooth.service
 
@@ -41,7 +40,11 @@ add "--experimental" to executing line
 
 ```
 systemctl start bluetooth
+systemctl status bluetooth
 ```
+
+This should show 'active (running)'.
+
 
 ## Nodejs app with NOBLE
 
@@ -63,9 +66,8 @@ systemctl start bluetooth
 
 ### Step 4
 
-- Edit node_modules/noble/lib/hci-socket/hci.js
+- Edit line 6 of node_modules/noble/lib/hci-socket/hci.js ike this:
 
-Line 6:
 ```
 var BluetoothHciSocket = require('@abandonware/bluetooth-hci-socket');
 ```
@@ -73,11 +75,11 @@ var BluetoothHciSocket = require('@abandonware/bluetooth-hci-socket');
 
 To make your own app:
 
-	```
-	npm init -y
-	npm install noble --save
-	npm install @abandonware/bluetooth-hci-socket --save
-	```
+```
+npm init -y
+npm install noble --save
+npm install @abandonware/bluetooth-hci-socket --save
+```
 
 And then edit node_modules/noble/lib/hci-socket/hci.js
 
@@ -116,6 +118,10 @@ Make sure to select 'No pairing required' in the project settings.
 
 Upload it to the micro:bit
 
+**Beware**
+
+The micro:bit has very little memory. Adding all 6 BLE services to your app results in a memory error. 
+If the micro:bit shows a sad face and then the number 020, it means your program is to large.
 
 ### Step 6
 
@@ -149,11 +155,11 @@ This script will connect to the first micro:bit it finds and send some commands 
 
 ## References
 
-https://www.youtube.com/watch?v=AFjYKEf7j2M
-https://www.youtube.com/watch?v=sP0MjQDv2N4
-http://www.bluez.org/download/
-https://github.com/noble/node-bluetooth-hci-socket/issues/107
-https://github.com/noble/noble
+- https://www.youtube.com/watch?v=AFjYKEf7j2M
+- https://www.youtube.com/watch?v=sP0MjQDv2N4
+- http://www.bluez.org/download/
+- https://github.com/noble/node-bluetooth-hci-socket/issues/107
+- https://github.com/noble/noble
 
 
 ## To run without sudo:
@@ -164,6 +170,8 @@ sudo setcap cap_net_raw+eip $(eval readlink -f `which node`)
 
 ## Using bluetoothctl
 
+You can use this tool to browse the BLE services of a device.
+
 ```
 sudo bluetoothctl
 
@@ -171,9 +179,9 @@ power on
 scan on
 scan off
 devices
-connect DD:82:10:FF:52:5E
+connect DD:82:10:FF:52:5E               <- add the address of your device here
 menu gatt
-select-attribute /org/bluez/hci0/dev_DD_82_10_FF_52_5E/service0013
+select-attribute /org/bluez/hci0/dev_DD_82_10_FF_52_5E/service0013       <- sample
 attribute-info
 back
 disconnect

@@ -4,7 +4,7 @@
   "description": "micro:bit BLE experiment",
   "main": "micro.js",
   "scripts": {
-    "test": "echo \"Run 'sudo node scan.js' or 'sudo node temperature.js' or 'sudo node fulltest.js'\" && exit 1"
+    "test": "echo \"Run 'sudo node scan.js' or 'sudo node temperature.js' or 'sudo node fulltest.js'\" && exit 0"
   },
   "keywords": [],
   "author": "PH",
@@ -16,6 +16,6 @@
   "addLater":
   {
     "body-parser": "^1.19.0",
-    "express": "^4.17.1",
+    "express": "^4.17.1"
   }
 }
