@@ -2,6 +2,7 @@
 
 Tested on a Raspberry PI 3B with Rasbian Stretch Lite and RaspiOS Lite
 
+
 ## Installing BLUEZ
 
 Install Prerequisites:
@@ -38,52 +39,58 @@ add "--experimental" to executing line
 systemctl start bluetooth
 ```
 
-
 ## Nodejs app with NOBLE
 
-Step 1
+### Step 1
+
 - First Install BLUEZ (see above)
 
-Step 2
-- Clone this repo - git clone <url>
+### Step 2
 
-Step 3
+- Clone this repo - git clone https://github.com/DeShrike/MicroBLE.git
+
+### Step 3
+
 - Run: npm init
 
-This will install noble and @abandonware/bluetooth-hci-socket
-Ignore the errors during the building of bluetooth-hci-socket
+	This will install noble and @abandonware/bluetooth-hci-socket
 
-Step 4
+	Ignore the errors during the building of bluetooth-hci-socket
+
+### Step 4
+
 - Edit node_modules/noble/lib/hci-socket/hci.js
 
-  line 6:
-  ```
+	line 6:
+	```
 	var BluetoothHciSocket = require('@abandonware/bluetooth-hci-socket');
-  ```
+	```
 
 
 To make your own app:
 
-```
-npm init -y
-npm install noble --save
-npm install @abandonware/bluetooth-hci-socket --save
-```
+	```
+	npm init -y
+	npm install noble --save
+	npm install @abandonware/bluetooth-hci-socket --save
+	```
 
-And the edit node_modules/noble/lib/hci-socket/hci.js
+	And then edit node_modules/noble/lib/hci-socket/hci.js
 
 
-Step 5
+### Step 5
+
 - Install one of the .hex files on your micro:bit
 
-More Info:
+	More Info:
 
-- https://www.bluetooth.com/blog/bluetooth-bbc-microbit/
-- https://github.com/lancaster-university/microbit-samples/tree/master/source/examples/bluetooth-services
-- https://lancaster-university.github.io/microbit-docs/ble/profile/
+	- https://www.bluetooth.com/blog/bluetooth-bbc-microbit/
+	- https://github.com/lancaster-university/microbit-samples/tree/master/source/examples/bluetooth-services
+	- https://lancaster-university.github.io/microbit-docs/ble/profile/
 
 
-Step 6
+### Step 6
+
 ```
 sudo node micro.js
 ```
