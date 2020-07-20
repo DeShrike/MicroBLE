@@ -96,7 +96,7 @@ You can also try the other .hex file. More info about those here:
 
 After the micro:bit reboots, you should see this pattern:
 
-![micro:bit](resources/MicroBLE1.png)
+![micro:bit](resources/MicroBLE2.png)
 
 #### Option 2 - Create your own .hex file
 
@@ -108,7 +108,7 @@ Install the bluetooth services
 
 Create the app. Mine looks like this:
 
-![micro:bit](resources/MicroBLE2.png)
+![micro:bit](resources/MicroBLE1.png)
 
 Upload it to the micro:bit
 
@@ -122,7 +122,7 @@ sudo node scan.js
 This will scan for Bluetooth LE devices and exit if it finds a micro:bit.
 
 ```
-sudo node scan.js
+sudo node temperature.js
 ```
 
 This will scan for Bluetooth LE devices and connect to the first micro:bit it finds and read the temperature.
@@ -130,17 +130,18 @@ This will scan for Bluetooth LE devices and connect to the first micro:bit it fi
 ![micro:bit](resources/MicroBLE_temperature.png)
 
 ```
-sudo node micro.js
+sudo node fulltest.js
 ```
 
 This script will connect to the first micro:bit it finds and send some commands to it:
 - reading temperature
 - reading the state of the 2 buttons
 - show a few patterns on the LED matrix
-- toggle PIN 0 low/high a few times
+- toggle PINs 0, 1 and 2 low/high a few times
 - Wait for a few button presses
 
 ![micro:bit](resources/MicroBLE_photo.jpg)
+
 
 ## References
 
