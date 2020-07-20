@@ -19,9 +19,11 @@ Download Bluez: http://www.bluez.org/download/
 
 ```
 wget http://www.kernel.org/pub/linux/bluetooth/bluez-5.54.tar.xz
-extract: tar -xvf bluez-5.54.tar.xz
+tar -xvf bluez-5.54.tar.xz
 cd bluez-5.54
 ```
+
+Compile and install:
 
 ```
 sudo ./configure        (--disable-systemd) ???
@@ -29,14 +31,21 @@ sudo make
 sudo make install
 ```
 
-You may now remove the folder bluez-5.54 and the .xz file
+You may now remove the folder bluez-5.54 and the .xz file if you wish.
 
-Reboot the Pi
+Reboot the Pi.
 
+Edit: /lib/systemd/system/bluetooth.service
 
-edit: /lib/systemd/system/bluetooth.service
+```
+sudo nano /lib/systemd/system/bluetooth.service
+```
 
-add "--experimental" to executing line
+Add "--experimental" to the 'ExecStart' line:
+
+```
+ExecStart=/usr/local/libexec/bluetooth/bluetoothd --experimental
+```
 
 ```
 systemctl start bluetooth
@@ -66,12 +75,11 @@ This should show 'active (running)'.
 
 ### Step 4
 
-- Edit line 6 of node_modules/noble/lib/hci-socket/hci.js ike this:
+- Edit line 6 of node_modules/noble/lib/hci-socket/hci.js like this:
 
 ```
 var BluetoothHciSocket = require('@abandonware/bluetooth-hci-socket');
 ```
-
 
 To make your own app:
 
@@ -88,9 +96,9 @@ And then edit node_modules/noble/lib/hci-socket/hci.js
 
 #### Option 1
 
-Install MicroBLE.hex on your micro:bit
+Install MicroBLE.hex on your micro:bit.
 
-You can also try the other .hex file. More info about those here:
+You can also try one of the other .hex files. More info about those here:
 
 - https://www.bluetooth.com/blog/bluetooth-bbc-microbit/
 - https://github.com/lancaster-university/microbit-samples/tree/master/source/examples/bluetooth-services
@@ -102,9 +110,9 @@ After the micro:bit reboots, you should see this pattern:
 
 #### Option 2 - Create your own .hex file
 
-Go to https://makecode.microbit.org
+Go to https://makecode.microbit.org and create a new project.
 
-Install the bluetooth services
+Install the bluetooth services.
 
 ![micro:bit](resources/MicroBLE0.png)
 
@@ -116,12 +124,12 @@ Make sure to select 'No pairing required' in the project settings.
 
 ![micro:bit](resources/MicroBLE3.png)
 
-Upload it to the micro:bit
+Upload it to the micro:bit.
 
 **Beware**
 
 The micro:bit has very little memory. Adding all 6 BLE services to your app results in a memory error. 
-If the micro:bit shows a sad face and then the number 020, it means your program is to large.
+If the micro:bit shows a sad face and then the number 020, it means your program is too large.
 
 ### Step 6
 
@@ -144,10 +152,10 @@ sudo node fulltest.js
 ```
 
 This script will connect to the first micro:bit it finds and send some commands to it:
-- reading temperature
-- reading the state of the 2 buttons
-- show a few patterns on the LED matrix
-- toggle PINs 0, 1 and 2 low/high a few times
+- Read temperature
+- Read the state of the 2 buttons
+- Show a few patterns on the LED matrix
+- Toggle PINs 0, 1 and 2 low/high a few times
 - Wait for a few button presses
 
 ![micro:bit](resources/MicroBLE_photo.jpg)
