@@ -1,20 +1,21 @@
 {
   "name": "ble",
   "version": "1.0.0",
-  "description": "micro:bit BLE tool",
+  "description": "micro:bit BLE experiment",
   "main": "micro.js",
   "scripts": {
-    "scan": "sudo node scan.js",
-    "temperature": "sudo node temperature.js",
-    "full": "sudo node fulltest.js"
+    "test": "echo \"Run 'sudo node scan.js' or 'sudo node temperature.js' or 'sudo node fulltest.js'\" && exit 1"
   },
   "keywords": [],
   "author": "PH",
   "license": "ISC",
   "dependencies": {
     "@abandonware/bluetooth-hci-socket": "^0.5.3-5",
+    "noble": "^1.9.1"
+  },
+  "addLater":
+  {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "noble": "^1.9.1"
   }
 }

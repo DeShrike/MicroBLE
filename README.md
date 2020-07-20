@@ -110,6 +110,10 @@ Create the app. Mine looks like this:
 
 ![micro:bit](resources/MicroBLE1.png)
 
+Make sure to select 'No pairing required' in the project settings.
+
+![micro:bit](resources/MicroBLE3.png)
+
 Upload it to the micro:bit
 
 
@@ -177,7 +181,9 @@ power off
 exit
 ```
 
-## WIP
+## TODO
+
+Reading of the Accelerometer and Magnetometer is not implemented (yet).
 
 server.js is a WIP
 
