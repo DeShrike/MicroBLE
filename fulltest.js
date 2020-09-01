@@ -444,7 +444,7 @@ async function doPinStuff(pinIOConfigCharacteristic, pinADConfigCharacteristic,
     bufPin = Buffer.from([2, 0, 1, 1, 0, 0]);
     buffers.push(bufPin);
 
-    for (let i = 0; i < 102; i++)
+    for (let i = 0; i < 101; i++)
     {
         activeReadWrites++;
         pinDataCharacteristic.write(buffers[bufIndex], true, writePinData);
