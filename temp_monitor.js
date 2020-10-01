@@ -1,4 +1,5 @@
 const noble = require("noble")
+const fs = require("fs")
 
 let activeReadWrites = 0;
 
@@ -7,6 +8,11 @@ const timeout = ms => new Promise(res => setTimeout(res, ms))
 async function delay()
 {
     await timeout(100);
+}
+
+async function delayseconds(seconds)
+{
+    await timeout(1000 * seconds);
 }
 
 async function halfDelay()
@@ -20,6 +26,48 @@ async function waitForEvents()
     {
         await delay();
     }
+}
+
+function buildLogfileName()
+{
+    let d = new Date();
+    let month = '' + (d.getMonth() + 1);
+    let year = d.getFullYear();
+
+    if (month.length < 2)
+        month = '0' + month;
+
+    return "temperature-" + year + month + ".txt";
+}
+
+function formatDate(date)
+{
+    let d = new Date(date);
+    let month = '' + (d.getMonth() + 1);
+    let day = '' + d.getDate();
+    let year = d.getFullYear();
+
+    let hour = '' + d.getHours();
+    let minute = '' + d.getMinutes();
+    let second = '' + d.getSeconds();
+
+    if (month.length < 2)
+        month = '0' + month;
+
+    if (day.length < 2)
+        day = '0' + day;
+
+    if (hour.length < 2)
+        hour = '0' + hour;
+
+    if (minute.length < 2)
+        minute = '0' + minute;
+
+    if (second.length < 2)
+        second = '0' + second;
+
+    return [year, month, day].join('-') + " "
+            + [hour, minute, second].join(':');
 }
 
 noble.on('stateChange', state => {
@@ -43,13 +91,9 @@ function foundChars(error, services, characteristics)
     console.log(characteristics);
 }
 
-console.log("Starting");
-noble.on('discover', discovered);
-
 function discovered(device)
 {
     console.log("Discovered Device: ", device.address);
-    // if (device.address === "dd:82:10:ff:52:5e")
     if (typeof device.advertisement.localName === "undefined")
     {
         return;
@@ -66,7 +110,29 @@ function discovered(device)
         console.log(device.advertisement.localName);
         console.log("RSSI: ", device.rssi);
         noble.stopScanning();
-        device.connect(function(error) { connected(error, device); });
+
+        // device.connect(function(error) { connected(error, device); });
+        loop(device);
+    }
+}
+
+async function loop(device)
+{
+    const interval = 1000 * 60 * 5; // 5 minutes
+    let nextAction = Date.now() + interval;
+    console.log("Waiting Until: " + formatDate(nextAction));
+    while (true)
+    {
+        await delayseconds(2);
+        if (Date.now() > nextAction)
+        {
+            console.log("->");
+            device.connect(function(error) { connected(error, device); });
+
+            nextAction = Date.now() + interval;
+            console.log("Waiting Until: " + formatDate(nextAction));
+            await delayseconds(10);
+        }
     }
 }
 
@@ -93,7 +159,7 @@ async function deviceready(error, services, characteristics, device)
 
     for (let service of services)
     {
-        service.characteristics.forEach(function(ch, chid) 
+        service.characteristics.forEach(function(ch, chid)
         {
             if (ch.uuid === "e95d9250251d470aa062fa1922dfa9a8") // Temperature
             {
@@ -120,11 +186,19 @@ function readTemperature(error, data, device)
         return;
     }
 
-    // console.log(data);
     let temperature = data[0];
     console.log("");
     console.log("Temperature: ", temperature, "°C");
     activeReadWrites--;
+
+    let r = {
+        temp: temperature,
+        deviceAddress: device.address,
+        deviceName: device.advertisement.localName,
+        time: Date.now()
+    };
+
+    writeRecord(r);
 }
 
 function disconnected(error)
@@ -136,7 +210,7 @@ function disconnected(error)
     }
 
     console.log("Disconnected");
-    process.exit();
+    // process.exit();
 }
 
 async function doTemperatureStuff(temperatureCharacteristic, device)
@@ -148,3 +222,43 @@ async function doTemperatureStuff(temperatureCharacteristic, device)
 
     await waitForEvents();
 }
+
+
+function writeRecord(r)
+{
+    let path = buildLogfileName();
+
+    let data = formatDate(r.time) + "\t" 
+        + r.time + "\t"
+        + r.temp + "\t"
+        + r.deviceAddress + "\t"
+        + r.deviceName + "\r\n";
+
+    let buffer = new Buffer(data);
+
+    fs.open(path, 'a', function(err, fd) {
+        if (err) {
+            throw 'could not open file: ' + err;
+        }
+
+        // write the contents of the buffer, from position 0 to the end, to the file descriptor returned in opening our file
+        fs.write(fd, buffer, 0, buffer.length, null, function(err) {
+            if (err)
+            {
+                throw 'error writing file: ' + err;
+            }
+
+            fs.close(fd, function() {
+                console.log('Wrote the file successfully: ' + path);
+            });
+        });
+    });
+}
+
+function main() 
+{
+    console.log("Temperature Monitoring");
+    noble.on('discover', discovered);
+}
+
+main();
