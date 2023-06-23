@@ -10,7 +10,7 @@
   "author": "PH",
   "license": "ISC",
   "dependencies": {
-    "@abandonware/bluetooth-hci-socket": "^0.5.3-5",
+    "@abandonware/bluetooth-hci-socket": "^0.5.3-10",
     "noble": "^1.9.1"
   },
   "addLater": {
